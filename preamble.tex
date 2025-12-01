@@ -1,0 +1,26 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}        
+\usepackage[dutch]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[a4paper,
+  lmargin=0.1666\paperwidth,
+  rmargin=0.1666\paperwidth,
+  tmargin=0.1111\paperheight,
+  bmargin=0.1111\paperheight]{geometry}
+\linespread{1.2}
+\newcommand{\set}[1]{\mathbb{#1}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\powerset}[1]{\mathcal{P}\left(#1\right)}
+\newcommand{\dd}{\mathrm{d}}
+
+\newenvironment{exercise}[1]{
+    \par\noindent
+    \textbf{Opgave #1.~}
+    \itshape
+}{
+    \par
+    \upshape
+}
