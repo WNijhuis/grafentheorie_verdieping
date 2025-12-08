@@ -1,9 +1,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}        
+\usepackage{lmodern}
 \usepackage[dutch]{babel}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{graphicx}
+\usepackage{graphicx, csquotes}
+\usepackage[style=numeric]{biblatex}
 \usepackage[a4paper,
   lmargin=0.1666\paperwidth,
   rmargin=0.1666\paperwidth,
@@ -17,10 +18,10 @@
 \newcommand{\dd}{\mathrm{d}}
 
 \newenvironment{exercise}[1]{
-    \par\noindent
-    \textbf{Opgave #1.~}
-    \itshape
+  \par\noindent
+  \textbf{Opgave #1.~}
+  \itshape
 }{
-    \par
-    \upshape
+  \par
+  \upshape
 }

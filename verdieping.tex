@@ -1,7 +1,11 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{blindtext}
 \usepackage{multicol}
+\usepackage{parskip}
 \input{preamble.tex}
+\setlength{\parindent}{0cm}
+\newtheorem{theorem}{Stelling}
+\addbibresource{bronnen.bib}
 
 \begin{document}
 
@@ -13,20 +17,29 @@
     {\Large 16127382, 16239288, 15956547} \\[0.5cm]
     {\Large \today} \\[0.5cm]
     {\Large dr. Ross Kang} \\[1cm]
-    \includegraphics[width=1\textwidth]{uva.jpg} \\[1cm]
+    \includegraphics[width=1\textwidth]{uva.jpg} \\
+
+    \vfill
+
+    \begin{abstract}
+
+    \end{abstract}
 \end{titlepage}
 
-\begin{abstract}
+\section{Inleiding}
+Hoeveel mensen moet je uitnodigen voor een feestje zodat er of drie mensen zijn die elkaar allemaal kennen of drie mensen zijn die elkaar allemaal niet kennen? Het antwoord op dit vraagstuk en vele vergelijkbare problemen komt uit de Ramsey-theorie, een deelgebied van de grafentheorie die begin 20e eeuw is bedacht door de Britse wiskundige Frank Ramsey.
+\section{Ramsey-theorie}
+De Ramsey-theorie kan grofweg worden omschreven als de studie naar het ontstaan van vaste substructuren binnen een grotere structuur. Dit is in 1930 door Ramsey vastgelegd in de volgende stelling en door hem bewezen \cite{ramsey1930}.
+\begin{theorem}
+    Voor elke graaf \(G\) bestaat er een \(N\in\set{N}\) zodat elke lijnkleuring met twee kleuren van \(K_N\) een monochromatische\footnote{Monochromatisch betekent hier dat elke lijn in de kopie van \(G\) dezelfde kleur heeft.} kopie van \(G\) bevat.
+\end{theorem}
+De kleinste \(N\) die hieraan voldoet wordt het \textit{Ramsey getal} van \(G\) genoemd en genoteerd als \(R(G)\). Als \(G=K_t\), dan schrijven we \(R(t)\). Meer algemeen is \(R(t_1, \dots, t_k, k)\) de \(N\in\set{N}\) zodat elke \(k\)-kleuring van \(K_N\) een monochromatische kopie van \(K_{t_a}\) bevat met kleur \(a\) \cite{conlon2015}.
 
-\end{abstract}
+Het blijkt dat deze Ramsey-getallen heel moeilijk zijn om te bepalen, momenteel zijn van de Ramsey-getallen van de vorm \(R(n) = R(n,n,2)\) namelijk alleen de waarden van \(R(1)\) tot \(R(4)\) bekent. Dit komt doordat \(K_n\) in totaal \(\frac{1}{2}n(n-1)\) lijnen bevat en dus moeten er in totaal \(2^{n(n-1)/2}\) grafen worden doorzocht om \(R(t)\) te controleren voor \(K_n\). Voor \(n=45\), een van de mogelijke waarden voor \(R(5)\), betekent dit dat er \(2^{990} \approx 1,046 \cdot 10^{298}\) grafen gecontroleerd moeten worden om te bepalen of \(R(5) = 45\).
+\section{Geschiedenis}
+\section{Modern onderzoek}
+\section{Conclusie}
 
-\begin{multicols}{2}
-    \section{Inleiding}
-    Hoeveel mensen moet je uitnodigen voor een feestje zodat er of drie mensen zijn die elkaar allemaal kennen of drie mensen die elkaar allemaal niet kennen? Het antwoord op dit vraagstuk en vele vergelijkbare problemen komt uit de zogeheten Ramsey-theorie, een deelgebied van de grafentheorie die begin 20e eeuw is bedacht door de Britse wiskundige Frank Ramsey.
-    \section{Geschiedenis}
-    \section{Paul Erdős}
-    \section{R(5,5)}
-    \section{Conclusie}
-\end{multicols}
+\printbibliography
 
 \end{document}
